@@ -1,4 +1,6 @@
 # NoSeizureWarning
+[Nexusmods](https://www.nexusmods.com/ixion/mods/10)  
+<br>
 This mod "removes" the pesky seizure warning at the start of the game by setting the time it takes to go away to zero.  
 It also slightly speeds up the splash screen which is shown before the seizure warning.  
 This mod does not skip the spash screen on purpose, because I felt it was unfair, not to show who made this amazing gem of a game.  
