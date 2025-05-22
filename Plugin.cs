@@ -22,13 +22,18 @@ public class Plugin : BasePlugin
     {
         Log = base.Log;
         harmony = new Harmony(Guid);
-        if (IL2CPPChainloader.Instance.Plugins.ContainsKey("captnced.IMHelper")) enabled = ModsMenu.isSelfEnabled();
+        if (IL2CPPChainloader.Instance.Plugins.ContainsKey("captnced.IMHelper")) setEnabled();
         if (!enabled)
             Log.LogInfo("Disabled by IMHelper!");
         else
             init();
     }
-    
+
+    private static void setEnabled()
+    {
+        enabled = ModsMenu.isSelfEnabled();
+    }
+
     private static void init()
     {
         harmony.PatchAll();
@@ -42,7 +47,7 @@ public class Plugin : BasePlugin
         harmony.UnpatchSelf();
         Log.LogInfo("Unloaded \"" + Name + "\" version " + Version + "!");
     }
-    
+
     public static void enable(bool value)
     {
         enabled = value;
